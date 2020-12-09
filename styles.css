@@ -5,19 +5,31 @@
 body {
     box-sizing: border-box;
     background: #f8f4fa;
+    font-family: 'Lato', sans-serif;
 }
+/*.container {
+    display:grid;
+    grid-template-columns: 2;
+}*/
 .logo {
     width:15rem;
     padding:0rem;
 }
 .nav {
-    display:flex;
+    display:grid;
+    grid-template-columns: 70% 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1;
     list-style: none;
     padding:1.5rem;
     
 }
-.nav > li {
-    align-self: end;
+.logoli {
+    grid-column: 1;
+}
+.items1 {
+    grid-column: 2;
+    grid-row:1;
+    
 }
 a {
     text-decoration: none;
@@ -27,6 +39,7 @@ a {
    
 }
 .contactInfo{
+    position: absolute;
     display:grid;
     grid-template-columns:1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -37,7 +50,7 @@ a {
     background: #ffffff;
     box-shadow:  30px 30px 68px #d2cfd4, 
              -30px -30px 68px #ffffff; 
-    z-index:1; 
+    z-index:3; 
 }
 .happyImage {
     border-radius: 50%;
@@ -109,8 +122,79 @@ button {
 
 }
 .About {
+    position: absolute;
     background-color:#F68887;
-    width:13rem;
-    height:12rem;
-    z-index:-10;
+    width:26rem;
+    height:13rem;
+    z-index:1;
+    border-radius: 50px 0px 0 50px;
+    margin-left:67vw;
+    margin-top: 10vw;
+    padding: 3rem;
+    color: whitesmoke;
+}
+marquee {
+    margin-bottom: 3rem;
+}
+.About > p {
+    text-align: justify;
+    margin:1.5rem 0 0 2rem;
+}
+button {
+    color:white;
+}
+.work {
+    background-color: #F3D24F;
+    width:50rem;
+    height:20rem;
+    margin:0 auto;
+    margin-top:80vh;
+    border-radius: 50px;
+    color:rgb(128, 122, 122);
+    padding:2rem;
+}
+.work > h2 {
+    text-align: center;
+
+}
+.cards {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin:3rem;
+    padding:1rem;
+    border-radius: 40px;
+    width: 20rem;
+    height:25rem;
+    background: #ffffff;
+    box-shadow:  30px 30px 68px #d2cfd4, 
+             -30px -30px 68px #ffffff; 
+    z-index:3; 
+    
+}
+.container {
+    display:flex;
+     margin-top:4rem;
+    justify-content: center;
+
+
+
+}
+.container > h1 {
+    justify-content: center;
+}
+.small {
+    width: 7rem;
+    grid-column: 1;
+    grid-row: 1;
+    margin-top:2rem;
+}
+.work > p {
+    margin-top: 2rem;
+    text-align: justify;
+}
+.cards > h3,p{
+    justify-self: center;
+    margin-top: 0.5rem;
+    text-align: justify;
 }
